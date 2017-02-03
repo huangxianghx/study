@@ -1,6 +1,5 @@
 package com.mindai;
 
-import com.mindai.common.util.SpringUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -30,8 +29,4 @@ public class Bootstrap {
         SpringApplication.run(Bootstrap.class, args);
     }
 
-    @Bean
-    public SpringUtil getSpringUtilBean() {
-        return new SpringUtil();
-    }
 }
