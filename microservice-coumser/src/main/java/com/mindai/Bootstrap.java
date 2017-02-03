@@ -1,8 +1,8 @@
 package com.mindai;
 
+import com.mindai.common.util.SpringUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -27,7 +27,11 @@ public class Bootstrap {
     }
 
     public static void main(String[] args) {
-//        SpringApplication.run(Bootstrap.class, args);
-        new SpringApplicationBuilder(Bootstrap.class).web(true).run(args);
+        SpringApplication.run(Bootstrap.class, args);
+    }
+
+    @Bean
+    public SpringUtil getSpringUtilBean() {
+        return new SpringUtil();
     }
 }

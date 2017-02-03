@@ -1,6 +1,5 @@
 package com.mindai;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -13,7 +12,8 @@ public class ProviderController {
 
     @RequestMapping(value = "/hello" ,method = RequestMethod.POST)
     @ResponseBody
-    public String hello(@RequestBody String name){
+    public String hello(@RequestBody String name) throws InterruptedException {
+        Thread.sleep(1500);
         System.out.println("hello:"+name);
         return "hello"+name;
     }
