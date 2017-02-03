@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/micorservice-config/micorservice-config.iml" filepath="$PROJECT_DIR$/micorservice-config/micorservice-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-api-gateway/micro-api-gateway.iml" filepath="$PROJECT_DIR$/micro-api-gateway/micro-api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-coumser/microservice-coumser.iml" filepath="$PROJECT_DIR$/microservice-coumser/microservice-coumser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-provider/microservice-provider.iml" filepath="$PROJECT_DIR$/microservice-provider/microservice-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-register/microservice-register.iml" filepath="$PROJECT_DIR$/microservice-register/microservice-register.iml" />
+    </modules>
+  </component>
+</project>
