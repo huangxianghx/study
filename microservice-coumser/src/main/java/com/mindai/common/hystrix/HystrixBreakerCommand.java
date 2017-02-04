@@ -69,13 +69,13 @@ public class HystrixBreakerCommand<Req,Res> extends HystrixCommand<HystrixRespon
      * 调用超时时，处理逻辑
      * @return
      */
-    public HystrixResponseEntity<Res> getFallback(){
-        HystrixResponseEntity<Res> entity=new HystrixResponseEntity<Res>();
-        entity.setCode("9999");
-        entity.setMsg("request timeout,it is fallback");
-        log.error("第三方接口调用超时");
-        return entity;
-    }
+//    public HystrixResponseEntity<Res> getFallback(){
+//        HystrixResponseEntity<Res> entity=new HystrixResponseEntity<Res>();
+//        entity.setCode("9999");
+//        entity.setMsg("request timeout,it is fallback");
+//        log.error("第三方接口调用超时");
+//        return entity;
+//    }
 
     public HystrixBreakerCommand<Req, Res> setDealParam(Req requestParams, Class<? extends HystrixCommandHandler<Req, Res>> dealClass) {
         this.requestParams = requestParams;

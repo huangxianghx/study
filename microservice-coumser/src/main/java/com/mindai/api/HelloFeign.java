@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "microservice-provider",fallback = HelloFeign.HelloFeignFallback.class)
 public interface HelloFeign {
     @RequestMapping(value = "/hello" ,method = RequestMethod.POST)
-    public String hello(@RequestParam("name") String name);
+    String hello(@RequestParam("name") String name);
 
     @Component
-    static class HelloFeignFallback implements HelloFeign {
+    class HelloFeignFallback implements HelloFeign {
         @Override
         public String hello(@RequestParam("name") String name) {
             System.out.println("i am fail.");

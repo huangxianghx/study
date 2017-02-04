@@ -19,7 +19,6 @@ public class HelloServiceImpl implements HelloService{
 
     @Override
     @RequestMapping(value = "/hello" ,method = RequestMethod.POST)
-    @ResponseBody
     public HelloResponse testHello(@RequestBody HelloRequest request) {
         return providerService.generate(request);
     }
