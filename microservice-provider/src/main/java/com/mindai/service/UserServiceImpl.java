@@ -23,6 +23,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
 
+    @Cacheable(value = "userInfoCache",keyGenerator = "wiselyKeyGenerator")
+    public void test(){
+
+    }
+
     @RequestMapping(value = "/getUserInfo" ,method = RequestMethod.POST)
     @ResponseBody
     @Cacheable(value = "userInfoCache",keyGenerator = "wiselyKeyGenerator")
@@ -36,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @RequestMapping(value = "/addUser" ,method = RequestMethod.POST)
     @ResponseBody
-    @CacheEvict(value = "userInfoCache", allEntries = true)
+    @CacheEvict(value = "userInfoCache")
     public UserResponse addUser(@RequestBody UserRequest request) {
         UserResponse response=new UserResponse();
         User user=new User();
@@ -48,7 +53,7 @@ public class UserServiceImpl implements UserService {
 
     @RequestMapping(value = "/updateUser" ,method = RequestMethod.POST)
     @ResponseBody
-    @CacheEvict(value = "userInfoCache", allEntries = true)
+    @CacheEvict(value = "userInfoCache")
     public UserResponse updateUser(@RequestBody UserRequest request) {
         UserResponse response=new UserResponse();
         User user=new User();
@@ -60,7 +65,7 @@ public class UserServiceImpl implements UserService {
 
     @RequestMapping(value = "/deleteUser" ,method = RequestMethod.POST)
     @ResponseBody
-    @CacheEvict(value = "userInfoCache", allEntries = true)
+    @CacheEvict(value = "userInfoCache")
     public void deleteUser(@RequestBody UserRequest request) {
         userMapper.deleteByName(request.getName());
     }
