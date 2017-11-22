@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:rdb="http://www.dangdang.com/schema/ddframe/rdb" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.dangdang.com/schema/ddframe/rdb
+                        http://www.dangdang.com/schema/ddframe/rdb/rdb.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <context:component-scan base-package="com.hx"/>
+    <context:property-placeholder ignore-unresolvable="true"/>
+
+    <bean id="hikariDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close" abstract="true">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="username" value="root"/>
+        <property name="password" value="huangxiang"/>
+    </bean>
+
+    <!--ds_为固定前缀  m-主数据源  b-备份数据库 0,1,2,3为相应库序号-->
+    <!--主数据源-->
+    <bean id="ds_m_0" parent="hikariDataSource">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study"/>
+    </bean>
+    <bean id="ds_m_1" parent="hikariDataSource">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/stydy_1"/>
+    </bean>
+
+    <rdb:strategy id="uidDatabaseShardingStrategy" sharding-columns="uid"
+                  algorithm-class="com.hx.jdbc.sharding.UidDatabaseShardingAlgorithm"/>
+    <rdb:strategy id="uidTableShardingStrategy" sharding-columns="uid"
+                  algorithm-class="com.hx.jdbc.sharding.Hash10TableShardingAlgorithm"/>
+
+    <rdb:data-source id="dataSource">
+        <rdb:sharding-rule data-sources="ds_m_0,ds_m_1">
+            <rdb:table-rules>
+                <rdb:table-rule logic-table="user_info" actual-tables="user_info_${0..9}"
+                                database-strategy="uidDatabaseShardingStrategy"
+                                table-strategy="uidTableShardingStrategy">
+                </rdb:table-rule>
+            </rdb:table-rules>
+        </rdb:sharding-rule>
+    </rdb:data-source>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager" />
+</beans>
