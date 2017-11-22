@@ -1,4 +1,4 @@
-import com.mindai.util.EncryptUtil;
+import com.hx.util.EncryptUtil;
 
 /**
  * @Description:

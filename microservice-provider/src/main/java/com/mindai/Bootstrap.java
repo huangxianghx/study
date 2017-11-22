@@ -1,4 +1,4 @@
-package com.mindai;
+package com.hx;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -25,8 +25,8 @@ import javax.sql.DataSource;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableHystrixDashboard
-@ComponentScan(basePackages = "com.mindai")
-@MapperScan({"com.mindai.persistence.mapper"})
+@ComponentScan(basePackages = "com.hx")
+@MapperScan({"com.hx.persistence.mapper"})
 public class Bootstrap {
     public static void main(String[] args) {
 //        SpringApplication.run(Bootstrap.class, args);
@@ -46,7 +46,7 @@ public class Bootstrap {
         sqlSessionFactoryBean.setDataSource(dataSource());
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        Resource[] baseRes = resolver.getResources("classpath:com/mindai/persistence/mapping/*.xml");
+        Resource[] baseRes = resolver.getResources("classpath:com/hx/persistence/mapping/*.xml");
         sqlSessionFactoryBean.setMapperLocations(baseRes);
 
         return sqlSessionFactoryBean.getObject();

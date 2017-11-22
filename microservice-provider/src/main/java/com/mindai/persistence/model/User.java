@@ -1,4 +1,4 @@
-package com.mindai.persistence.model;
+package com.hx.persistence.model;
 
 public class User {
     private Integer id;

@@ -1,4 +1,4 @@
-package com.mindai.util;
+package com.hx.util;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;

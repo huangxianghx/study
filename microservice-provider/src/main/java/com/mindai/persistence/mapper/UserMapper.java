@@ -1,6 +1,6 @@
-package com.mindai.persistence.mapper;
+package com.hx.persistence.mapper;
 
-import com.mindai.persistence.model.User;
+import com.hx.persistence.model.User;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);

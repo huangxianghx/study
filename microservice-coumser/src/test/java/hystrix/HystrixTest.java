@@ -1,7 +1,7 @@
 package hystrix;
 
-import com.mindai.common.hystrix.HystrixResponseEntity;
-import com.mindai.common.hystrix.HystrixBreakerCommand;
+import com.hx.common.hystrix.HystrixResponseEntity;
+import com.hx.common.hystrix.HystrixBreakerCommand;
 import org.junit.Test;
 
 /**

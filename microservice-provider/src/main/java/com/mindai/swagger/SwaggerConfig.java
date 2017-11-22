@@ -1,4 +1,4 @@
-package com.mindai.swagger;
+package com.hx.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SwaggerConfig
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("com.mindai.facade.api"))
+                        .basePackage("com.hx.facade.api"))
                 .paths(PathSelectors.any()).build()
 //                .genericModelSubstitutes(ResultData.class)
                 .useDefaultResponseMessages(false).enable(true);

@@ -16,18 +16,18 @@
                         connectionURL="jdbc:mysql://localhost:3306/study"
                         userId="root" password="root"/>
 
-        <javaModelGenerator targetPackage="com.mindai.persistence.model"
+        <javaModelGenerator targetPackage="com.hx.persistence.model"
                             targetProject="F:/study/microservice-provider/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.mindai.persistence.mapping"
+        <sqlMapGenerator targetPackage="com.hx.persistence.mapping"
                          targetProject="F:/study/microservice-provider/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.mindai.persistence.mapper"
+        <javaClientGenerator targetPackage="com.hx.persistence.mapper"
                              targetProject="F:/study/microservice-provider/src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>

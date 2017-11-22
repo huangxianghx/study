@@ -1,4 +1,4 @@
-package com.mindai.facade.model;
+package com.hx.facade.model;
 
 import lombok.Data;
 

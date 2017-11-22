@@ -1,7 +1,7 @@
-package com.mindai.facade.api;
+package com.hx.facade.api;
 
-import com.mindai.facade.model.UserRequest;
-import com.mindai.facade.model.UserResponse;
+import com.hx.facade.model.UserRequest;
+import com.hx.facade.model.UserResponse;
 import org.springframework.web.bind.annotation.RequestBody;
 
 /**

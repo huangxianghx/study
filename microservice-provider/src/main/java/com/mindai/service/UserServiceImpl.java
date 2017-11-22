@@ -1,10 +1,10 @@
-package com.mindai.service;
+package com.hx.service;
 
-import com.mindai.facade.api.UserService;
-import com.mindai.facade.model.UserRequest;
-import com.mindai.facade.model.UserResponse;
-import com.mindai.persistence.mapper.UserMapper;
-import com.mindai.persistence.model.User;
+import com.hx.facade.api.UserService;
+import com.hx.facade.model.UserRequest;
+import com.hx.facade.model.UserResponse;
+import com.hx.persistence.mapper.UserMapper;
+import com.hx.persistence.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

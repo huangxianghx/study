@@ -1,4 +1,4 @@
-package com.mindai.redis;
+package com.hx.redis;
 
 /**
  * @Description:

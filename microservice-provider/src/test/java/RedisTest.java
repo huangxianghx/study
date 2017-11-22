@@ -1,5 +1,5 @@
-import com.mindai.Bootstrap;
-import com.mindai.facade.model.UserResponse;
+import com.hx.Bootstrap;
+import com.hx.facade.model.UserResponse;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
