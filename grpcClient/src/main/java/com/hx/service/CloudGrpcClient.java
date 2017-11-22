@@ -17,9 +17,9 @@ public class CloudGrpcClient {
     @GrpcClient("grpc-server")
     protected Channel serverChannel;
 
-    public void sayHello(String name){
+    public String sayHello(String name){
         HelloReply response = getStub().sayHello(HelloRequest.newBuilder().setName(name).build());
-        System.out.printf(response.getMessage());
+        return response.getMessage();
     }
 
     private GreeterGrpc.GreeterBlockingStub getStub() {

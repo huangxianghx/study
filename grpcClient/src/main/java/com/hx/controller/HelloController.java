@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,9 +19,9 @@ public class HelloController {
     CloudGrpcClient cloudGrpcClient;
 
     @RequestMapping(value = "/hello" ,method = RequestMethod.POST)
-    public String sayHello() {
-        cloudGrpcClient.sayHello("123");
-        return null;
+    public String sayHello(@RequestParam String name) {
+        String response = cloudGrpcClient.sayHello(name);
+        return response;
     }
 
 }
