@@ -45,19 +45,11 @@ public class HelloWorldClient {
      * 发送消息
      * @param name
      */
-    public void greet(String name) {
+    public String greet(String name) {
         HelloRequest request = HelloRequest.newBuilder().setName(name).build();
         HelloReply response = blockingStub.sayHello(request);
-        System.out.println(response.getMessage());
+        return response.getMessage();
 
     }
 
-//    public static void main(String[] args) throws InterruptedException {
-//        HelloWorldClient client = new HelloWorldClient("127.0.0.1", 50051);
-//        for (int i = 0; i < 5; i++) {
-//            client.greet("world:" + i);
-//        }
-//        client.shutdown();
-//
-//    }
 }
