@@ -1,4 +1,4 @@
-import com.hx.Bootstrap;
+import com.hx.ConsumerApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.IntegrationTest;
@@ -12,7 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
  * @Date: 2016年10月20日
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Bootstrap.class)
+@SpringApplicationConfiguration(classes = ConsumerApplication.class)
 @WebAppConfiguration
 @Slf4j
 @IntegrationTest

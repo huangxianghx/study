@@ -1,5 +1,7 @@
 spring.application.name: grpc-client
 server.port: 8082
+#配置zipKin Server的地址
+spring.zipkin.base-url: http://127.0.0.1:9411
 
 #----eureka 配置
 eureka:

@@ -1,7 +1,6 @@
 package com.hx.controller;
 
 import com.hx.service.CloudGrpcClient;
-import com.hx.service.HelloWorldClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @Autowired
     CloudGrpcClient cloudGrpcClient;
-    @Autowired
-    HelloWorldClient helloWorldClient;
+//    @Autowired
+//    HelloWorldClient helloWorldClient;
 
     /**
      * grpc客户端调用-集成spring cloud
@@ -38,11 +37,11 @@ public class HelloController {
      * @return
      * @throws InterruptedException
      */
-    @RequestMapping(value = "/sayHelloOrigin" ,method = RequestMethod.POST)
-    public String sayHelloOrigin(@RequestParam String name) throws InterruptedException {
-        HelloWorldClient client = new HelloWorldClient("127.0.0.1", 50051);
-        String response = client.greet("world:" + name);
-        client.shutdown();
-        return response;
-    }
+//    @RequestMapping(value = "/sayHelloOrigin" ,method = RequestMethod.POST)
+//    public String sayHelloOrigin(@RequestParam String name) throws InterruptedException {
+//        HelloWorldClient client = new HelloWorldClient("127.0.0.1", 50051);
+//        String response = client.greet("world:" + name);
+//        client.shutdown();
+//        return response;
+//    }
 }

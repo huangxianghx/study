@@ -1,4 +1,4 @@
-import com.hx.Bootstrap;
+import com.hx.ProviderApplication;
 import com.hx.facade.model.UserResponse;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(Bootstrap.class)
+@SpringApplicationConfiguration(ProviderApplication.class)
 public class RedisTest {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;

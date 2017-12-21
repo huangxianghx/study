@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 @EnableCircuitBreaker
 @EnableHystrixDashboard
-public class Bootstrap {
+public class ConsumerApplication {
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
@@ -29,7 +29,7 @@ public class Bootstrap {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Bootstrap.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
 //        new SpringApplicationBuilder(Bootstrap.class).web(true).run(args);
     }
 

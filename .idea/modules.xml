@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/grpcClient/grpcClient.iml" filepath="$PROJECT_DIR$/grpcClient/grpcClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grpcProto/grpcProto.iml" filepath="$PROJECT_DIR$/grpcProto/grpcProto.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grpcServer/grpcServer.iml" filepath="$PROJECT_DIR$/grpcServer/grpcServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-coumser/microservice-coumser.iml" filepath="$PROJECT_DIR$/microservice-coumser/microservice-coumser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-provider/microservice-provider.iml" filepath="$PROJECT_DIR$/microservice-provider/microservice-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-register/microservice-register.iml" filepath="$PROJECT_DIR$/microservice-register/microservice-register.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sharding-jdbc-demo/sharding-jdbc-demo.iml" filepath="$PROJECT_DIR$/sharding-jdbc-demo/sharding-jdbc-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/study.iml" filepath="$PROJECT_DIR$/.idea/study.iml" />
     </modules>
   </component>

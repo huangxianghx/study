@@ -1,4 +1,4 @@
-import com.hx.Bootstrap;
+import com.hx.ProviderApplication;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @Date: 2016年11月22日
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(Bootstrap.class)
+@SpringApplicationConfiguration(ProviderApplication.class)
 public class ApplicationTests {
     @Autowired
     private RedisTemplate redisTemplate;

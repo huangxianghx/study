@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface UserService {
     UserResponse getUserInfo(@RequestBody UserRequest request) throws InterruptedException;
 
-    UserResponse addUser(@RequestBody UserRequest request);
-
-    UserResponse updateUser(@RequestBody UserRequest request);
-
-    void deleteUser(@RequestBody UserRequest request);
+//    UserResponse addUser(@RequestBody UserRequest request);
+//
+//    UserResponse updateUser(@RequestBody UserRequest request);
+//
+//    void deleteUser(@RequestBody UserRequest request);
 }

@@ -104,25 +104,18 @@
             <version>${druid-version}</version>
         </dependency>
 
+        <!--web -->
         <dependency>
-            <groupId>net.devh</groupId>
-            <artifactId>grpc-lib</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--集成kafka-->
         <dependency>
-            <groupId>net.devh</groupId>
-            <artifactId>grpc-server-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-common</artifactId>
-            <version>4.1.14.Final</version>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>2.1.0.RELEASE</version>
         </dependency>
 
-        <dependency>
-            <groupId>net.devh</groupId>
-            <artifactId>grpc-server-spring-boot-starter</artifactId>
-            <version>1.0.0.RELEASE</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>

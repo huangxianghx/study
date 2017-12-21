@@ -24,7 +24,7 @@ public class ProviderService implements HystrixCommandHandler<HelloRequest,Hello
     private RestTemplate restTemplate;
 
     public HelloResponse generate(@RequestBody HelloRequest request) {
-        HystrixBreakerCommand<HelloRequest,HelloResponse> command=new HystrixBreakerCommand<>("testGroup","testKey","testThreadPoolKey",1000);
+        HystrixBreakerCommand<HelloRequest,HelloResponse> command=new HystrixBreakerCommand<>("testGroup","testKey","testThreadPoolKey",10000);
         command.setDealParam(request,this.getClass());
         HystrixResponseEntity<HelloResponse> entity=command.execute();
         return entity.getData();
