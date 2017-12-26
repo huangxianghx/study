@@ -28,7 +28,7 @@ public class HelloWorldServer {
                 .build()
                 .start();
 
-        System.out.println("service start...");
+        System.out.println("controller start...");
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
 
@@ -60,7 +60,7 @@ public class HelloWorldServer {
 
 
         public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
-            System.out.println("service:"+req.getName());
+            System.out.println("controller:"+req.getName());
             HelloReply reply = HelloReply.newBuilder().setMessage(("Hello: " + req.getName())).build();
             responseObserver.onNext(reply);
             responseObserver.onCompleted();

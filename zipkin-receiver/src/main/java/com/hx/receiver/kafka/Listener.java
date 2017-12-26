@@ -1,8 +1,9 @@
-package com.hx.kafka;
+package com.hx.receiver.kafka;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
+
 /**
  * @author huangxiang
  * @Note
