@@ -21,10 +21,10 @@
     <!--ds_为固定前缀  m-主数据源  b-备份数据库 0,1,2,3为相应库序号-->
     <!--主数据源-->
     <bean id="ds_m_0" parent="hikariDataSource">
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study_0"/>
     </bean>
     <bean id="ds_m_1" parent="hikariDataSource">
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/stydy_1"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study_1"/>
     </bean>
 
     <rdb:strategy id="uidDatabaseShardingStrategy" sharding-columns="uid"

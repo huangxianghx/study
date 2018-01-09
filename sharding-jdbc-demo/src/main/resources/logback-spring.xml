@@ -1,0 +1,76 @@
+<!--这里配置只支持 spring boot-->
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+    <!-- 项目名称 -->
+	<springProperty scope="context" name="springProjectName" source="spring.project.name" defaultValue="study" />
+	<!-- 模块名称 -->
+	<springProperty scope="context" name="springAppName" source="spring.application.name" defaultValue="sharding-jdbc-demo" />
+	<property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %marker ${springProjectName:-} ${springAppName:-} [thread:%thread,pid:${PID:-}] [%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-B3-ParentSpanId:-},%X{X-Span-Export:-}] %logger{100} --- %msg%n" />
+	<property name="LOG_DIR" value="F:/study/log/${springProjectName}/" />
+	<property name="LOG_GZIP" value="F:/study/log/${springProjectName}/gzip/" />
+	<!-- KAFKA_SERVER 只支持host方式 -->
+	<!--<property name="KAFKA_SERVER" value="192.168.7.128:9092" />-->
+	<!--<property name="KAFKA_TOPIC" value="sharding-jdbc-demo" />-->
+
+	<!--控制台输出-->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${LOG_PATTERN}</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+
+	<!-- file appender -->
+	<appender name="ROLLFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/${springAppName}.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>${LOG_GZIP}/${springAppName}.%d{yyyy-MM-dd,Asia/Hong_Kong}.gz</fileNamePattern>
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${LOG_PATTERN}</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+
+	<!-- kafka appender -->
+	<!--<appender name="kafkaAppender" class="com.github.danielwegener.logback.kafka.KafkaAppender">-->
+		<!--&lt;!&ndash; This is the default encoder that encodes every log message to an utf8-encoded string &ndash;&gt;-->
+		<!--<encoder class="com.github.danielwegener.logback.kafka.encoding.LayoutKafkaMessageEncoder">-->
+			<!--<layout class="ch.qos.logback.classic.PatternLayout">-->
+				<!--<pattern>-->
+					<!--<pattern>-->
+						<!--{-->
+						<!--"timestamp": "%d{yyyy-MM-dd HH:mm:ss.SSS}",-->
+						<!--"level":"%-5level",-->
+						<!--"marker":"%marker",-->
+						<!--"host_name":"%property{HOSTNAME}",-->
+						<!--"project_name":"${springProjectName:-}",-->
+						<!--"app_name":"${springAppName:-}",-->
+						<!--"thread":"%thread",-->
+						<!--"pid":"${PID:-}",-->
+						<!--"class":"%logger{100}",-->
+						<!--"X":"%X{X-B3-TraceId:-} %X{X-B3-SpanId:-} %X{X-B3-ParentSpanId:-} %X{X-Span-Export:-}",-->
+						<!--"message":"%msg",-->
+						<!--"stackTrace":"%xException"-->
+						<!--}-->
+					<!--</pattern>-->
+				<!--</pattern>-->
+			<!--</layout>-->
+		<!--</encoder>-->
+		<!--<topic>${KAFKA_TOPIC}</topic>-->
+		<!--<keyingStrategy class="com.github.danielwegener.logback.kafka.keying.RoundRobinKeyingStrategy" />-->
+		<!--<deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy" />-->
+		<!--<producerConfig>bootstrap.servers=${KAFKA_SERVER}</producerConfig>-->
+	<!--</appender>-->
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT"/>
+		<!--<appender-ref ref="ROLLFILE"/>-->
+		<!--<appender-ref ref="kafkaAppender"/>-->
+	</root>
+
+</configuration>
