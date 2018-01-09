@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:sharding="http://shardingjdbc.io/schema/shardingjdbc/orchestration/sharding"
+       xmlns:reg="http://shardingjdbc.io/schema/shardingjdbc/orchestration/reg"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd
+                        http://shardingjdbc.io/schema/shardingjdbc/orchestration/sharding
+                        http://shardingjdbc.io/schema/shardingjdbc/orchestration/sharding/sharding.xsd
+                        http://shardingjdbc.io/schema/shardingjdbc/orchestration/reg
+                        http://shardingjdbc.io/schema/shardingjdbc/orchestration/reg/reg.xsd
+                        ">
+    <context:property-placeholder  ignore-unresolvable="true" />
+    <context:component-scan base-package="com.hx"/>
+
+    <bean id="hikariDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close" abstract="true">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="username" value="root"/>
+        <property name="password" value="huangxiang"/>
+    </bean>
+
+    <!--主数据源-->
+    <bean id="study_0" parent="hikariDataSource">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study_0"/>
+    </bean>
+    <bean id="study_1" parent="hikariDataSource">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study_1"/>
+    </bean>
+
+    <sharding:standard-strategy id="databaseStrategy" sharding-column="uid"
+                                precise-algorithm-class="com.hx.jdbc.sharding.DatabaseShardingAlgorithm" />
+    <sharding:standard-strategy id="tableStrategy" sharding-column="uid"
+                                precise-algorithm-class="com.hx.jdbc.sharding.HashTableShardingAlgorithm" />
+
+    <sharding:data-source id="shardingDataSource" registry-center-ref="regCenter">
+        <sharding:sharding-rule data-source-names="study_0,study_1">
+            <sharding:table-rules>
+                <sharding:table-rule logic-table="user_info" actual-data-nodes="study_${0..1}.user_info_${0..9}" database-strategy-ref="databaseStrategy" table-strategy-ref="tableStrategy" />
+            </sharding:table-rules>
+        </sharding:sharding-rule>
+        <sharding:props>
+            <prop key="sql.show">true</prop>
+        </sharding:props>
+    </sharding:data-source>
+
+    <reg:zookeeper id="regCenter" server-lists="192.168.7.128:2181" namespace="3.8-namespace" base-sleep-time-milliseconds="1000" max-sleep-time-milliseconds="3000" max-retries="3" />
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="shardingDataSource"/>
+        <property name="mapperLocations" value="classpath*:com/hx/mapper/*.java"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.hx"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+</beans>

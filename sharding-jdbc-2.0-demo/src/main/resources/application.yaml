@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: sharding-jdbc-2.0-demo
+    datasource:
+        initialize: false
+
+server:
+    port: 8100
+
+#----eureka 配置
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+
+#----mybatis配置
+mybatis.configuration.map-underscore-to-camel-case: true
