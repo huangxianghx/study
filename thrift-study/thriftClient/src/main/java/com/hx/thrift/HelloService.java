@@ -198,19 +198,40 @@ public class HelloService {
    */
   public static class Processor<I extends Iface> extends org.apache.thrift.TBaseProcessor<I> implements org.apache.thrift.TProcessor {
     private static final org.slf4j.Logger _LOGGER = org.slf4j.LoggerFactory.getLogger(Processor.class.getName());
+
+    /**
+     * 构造方法
+     * @param iface
+     */
     public Processor(I iface) {
       super(iface, getProcessMap(new java.util.HashMap<String, org.apache.thrift.ProcessFunction<I, ? extends org.apache.thrift.TBase>>()));
     }
 
+    /**
+     * 构造方法
+     * @param iface
+     */
     protected Processor(I iface, java.util.Map<String, org.apache.thrift.ProcessFunction<I, ? extends org.apache.thrift.TBase>> processMap) {
       super(iface, getProcessMap(processMap));
     }
 
+    /**
+     * 将方法函数放入map
+     * @param processMap
+     * @param <I>
+     * @return
+     */
     private static <I extends Iface> java.util.Map<String,  org.apache.thrift.ProcessFunction<I, ? extends org.apache.thrift.TBase>> getProcessMap(java.util.Map<String, org.apache.thrift.ProcessFunction<I, ? extends  org.apache.thrift.TBase>> processMap) {
       processMap.put("sayHello", new sayHello());
       return processMap;
     }
 
+    /**
+     * 方法函数
+     * 自动生成的Method类继承了ProcessFunction类，它负责把方法参数，iface, 方法返回值这些抽象的概念组合在一起，
+     * 通过抽象模型来完成实际方法的调用。实际方法的实现者实现了Iface接口。
+     * @param <I>
+     */
     public static class sayHello<I extends Iface> extends org.apache.thrift.ProcessFunction<I, sayHello_args> {
       public sayHello() {
         super("sayHello");
@@ -224,6 +245,13 @@ public class HelloService {
         return false;
       }
 
+      /**
+       * 执行iface实现类逻辑，返回响应
+       * @param iface
+       * @param args
+       * @return
+       * @throws org.apache.thrift.TException
+       */
       public sayHello_result getResult(I iface, sayHello_args args) throws org.apache.thrift.TException {
         sayHello_result result = new sayHello_result();
         result.success = iface.sayHello(args.name);
@@ -233,21 +261,44 @@ public class HelloService {
 
   }
 
+  /**
+   * 异步方法调用
+   * @param <I>
+   */
   public static class AsyncProcessor<I extends AsyncIface> extends org.apache.thrift.TBaseAsyncProcessor<I> {
     private static final org.slf4j.Logger _LOGGER = org.slf4j.LoggerFactory.getLogger(AsyncProcessor.class.getName());
+    /**
+     * 构造方法
+     * @param iface
+     */
     public AsyncProcessor(I iface) {
       super(iface, getProcessMap(new java.util.HashMap<String, org.apache.thrift.AsyncProcessFunction<I, ? extends org.apache.thrift.TBase, ?>>()));
     }
-
+    /**
+     * 构造方法
+     * @param iface
+     */
     protected AsyncProcessor(I iface, java.util.Map<String,  org.apache.thrift.AsyncProcessFunction<I, ? extends  org.apache.thrift.TBase, ?>> processMap) {
       super(iface, getProcessMap(processMap));
     }
 
+    /**
+     * 将方法函数放入map
+     * @param processMap
+     * @param <I>
+     * @return
+     */
     private static <I extends AsyncIface> java.util.Map<String,  org.apache.thrift.AsyncProcessFunction<I, ? extends  org.apache.thrift.TBase,?>> getProcessMap(java.util.Map<String,  org.apache.thrift.AsyncProcessFunction<I, ? extends  org.apache.thrift.TBase, ?>> processMap) {
       processMap.put("sayHello", new sayHello());
       return processMap;
     }
 
+    /**
+     * 方法函数
+     * 自动生成的Method类继承了ProcessFunction类，它负责把方法参数，iface, 方法返回值这些抽象的概念组合在一起，
+     * 通过抽象模型来完成实际方法的调用。实际方法的实现者实现了Iface接口。
+     * @param <I>
+     */
     public static class sayHello<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, sayHello_args, String> {
       public sayHello() {
         super("sayHello");

@@ -1,5 +1,6 @@
 package com.hx.service;
 
+import com.huya.risk.RiskServiceRpcClient;
 import com.hx.thrift.HelloService;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
@@ -32,6 +33,7 @@ public class HelloClient{
         }
     }
     public static void main(String[] args) {
+        RiskServiceRpcClient riskServiceRpcClient;
         HelloClient client = new HelloClient();
         client.startClient("Vilarsail");
     }

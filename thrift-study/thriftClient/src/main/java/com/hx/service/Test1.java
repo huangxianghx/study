@@ -18,33 +18,33 @@ import java.util.function.Function;
 
 public class Test1 {
     public static void main(String[] args) throws TException {
-//        try{
-//            ThriftClient thriftClient = new ThriftClientImpl(() -> Arrays.asList(//
-//                    ThriftServerInfo.of("localhost", 8090)
-//            ));
-//            HelloService.Iface iFace = thriftClient.iface(HelloService.Client.class);
-//            String response = iFace.sayHello("hello");
-//            System.out.println("response===="+response);
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
+        try{
+            ThriftClient thriftClient = new ThriftClientImpl(() -> Arrays.asList(//
+                    ThriftServerInfo.of("localhost", 8090)
+            ));
+
+            String response = thriftClient.iface(HelloService.Client.class, TBinaryProtocol::new, 0).sayHello("hello");
+            System.out.println("response===="+response);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
 //        transport = new TSocket(SERVER_IP, SERVER_PORT, TIMEOUT);
 //        TProtocol protocol = new TBinaryProtocol(transport);
 //        HelloService.Client client = new HelloService.Client(protocol);
 
 
-        GenericKeyedObjectPoolConfig poolConfig = new GenericKeyedObjectPoolConfig();
-        Function<ThriftServerInfo, TTransport> transportProvider = info -> {
-            TSocket socket = new TSocket(info.getHost(), info.getPort(),30000);
-            TFramedTransport transport = new TFramedTransport(socket);
-            return transport;
-        };
-        ThriftClient customizeThriftClient = new ThriftClientImpl(() -> Arrays.asList(//
-                ThriftServerInfo.of("localhost", 8090)
-        ), new DefaultThriftConnectionPoolImpl(poolConfig, transportProvider));
-        String response = customizeThriftClient.iface(HelloService.Client.class).sayHello("hello world.");
-        System.out.println("response===="+response);
+//        GenericKeyedObjectPoolConfig poolConfig = new GenericKeyedObjectPoolConfig();
+//        Function<ThriftServerInfo, TTransport> transportProvider = info -> {
+//            TSocket socket = new TSocket(info.getHost(), info.getPort(),30000);
+//            TFramedTransport transport = new TFramedTransport(socket);
+//            return transport;
+//        };
+//        ThriftClient customizeThriftClient = new ThriftClientImpl(() -> Arrays.asList(//
+//                ThriftServerInfo.of("localhost", 8090)
+//        ), new DefaultThriftConnectionPoolImpl(poolConfig, transportProvider));
+//        String response = customizeThriftClient.iface(HelloService.Client.class).sayHello("hello world.");
+//        System.out.println("response===="+response);
     }
 
 }

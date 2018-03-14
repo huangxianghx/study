@@ -1,4 +1,4 @@
-package com.hx.bean;
+package com.hx.study.springbootstudy.config;
 
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransportException;

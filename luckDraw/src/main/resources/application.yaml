@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: luck-draw
+    datasource:
+            url: jdbc:mysql://localhost:3306/study
+            username: root
+            password: huangxiang
+            # 使用druid数据源
+            type: com.zaxxer.hikari.HikariDataSource
+            driver-class-name: com.mysql.jdbc.Driver
+server:
+    port: 8010
+
+

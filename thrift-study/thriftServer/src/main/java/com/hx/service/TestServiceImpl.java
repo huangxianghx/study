@@ -1,12 +1,14 @@
 package com.hx.service;
 
-import com.hx.thrift.HelloService;
+import com.hx.thrift.TestService;
 import org.apache.thrift.TException;
 
-/**
- * thrift同步接口方法
- */
-public class HelloServiceImpl implements HelloService.Iface{
+public class TestServiceImpl implements TestService.Iface{
+    @Override
+    public void ping() throws TException {
+        System.out.println("ping");
+    }
+
     @Override
     public String sayHello(String name) throws TException {
         System.out.println("server ...");
