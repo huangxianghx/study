@@ -1,0 +1,30 @@
+spring:
+    application:
+        name: grpc-server
+    zipkin:
+        base-url: http://127.0.0.1:9411
+server:
+    port: 10012
+
+#----eureka 配置
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+
+default.count.limit: 100
+default.money.limit: 1000
+default.expire.sec: 600
+max.dist.sec: 1800
+
+# grpc配置
+grpc:
+  server:
+    port: 9090
+    address: 0.0.0.0
+
+

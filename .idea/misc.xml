@@ -6,6 +6,27 @@
         <option value="$PROJECT_DIR$/microservice-coumser/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-provider/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-register/pom.xml" />
+        <option value="$PROJECT_DIR$/server-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin-receiver/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin-sender/pom.xml" />
+        <option value="$PROJECT_DIR$/grpcClient/pom.xml" />
+        <option value="$PROJECT_DIR$/grpcServer/pom.xml" />
+        <option value="$PROJECT_DIR$/grpcProto/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin-server-es/pom.xml" />
+        <option value="$PROJECT_DIR$/sharding-jdbc-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/sharding-jdbc-2.0-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/luckDraw/pom.xml" />
+        <option value="$PROJECT_DIR$/thrift-study/thriftClient/pom.xml" />
+        <option value="$PROJECT_DIR$/thrift-study/thriftProto/pom.xml" />
+        <option value="$PROJECT_DIR$/thrift-study/thriftServer/pom.xml" />
+        <option value="$PROJECT_DIR$/thrift-study/thrift-client-pool/pom.xml" />
+        <option value="$PROJECT_DIR$/grpc-study/grpcServer/pom.xml" />
+        <option value="$PROJECT_DIR$/grpc-study/grpcProto/pom.xml" />
+        <option value="$PROJECT_DIR$/grpc-study/grpcClient/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-study/spring-boot-study/pom.xml" />
+        <option value="$PROJECT_DIR$/tars-study/tars-study/pom.xml" />
+        <option value="$PROJECT_DIR$/tars-study/tars-client/pom.xml" />
+        <option value="$PROJECT_DIR$/tars-study/tars-server/pom.xml" />
       </list>
     </option>
   </component>

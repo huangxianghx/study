@@ -1,0 +1,281 @@
+2017-12-28 17:20:42.691 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] com.hx.sender.SenderApplication --- No active profile set, falling back to default profiles: default
+2017-12-28 17:20:42.703 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext --- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11841b15: startup date [Thu Dec 28 17:20:42 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@413f69cc
+2017-12-28 17:20:43.224 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.cloud.context.scope.GenericScope --- BeanFactory id=0b37db66-81f9-3395-bd4a-81987ee918c5
+2017-12-28 17:20:43.254 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$a94044a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:20:43.312 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport' of type [org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport$$EnhancerBySpringCGLIB$$12cfd0e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:20:43.385 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.sleuth.annotation.SleuthAnnotationAutoConfiguration' of type [org.springframework.cloud.sleuth.annotation.SleuthAnnotationAutoConfiguration$$EnhancerBySpringCGLIB$$d7f37952] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:20:43.532 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'sleuthAdvisorConfig' of type [org.springframework.cloud.sleuth.annotation.SleuthAdvisorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:20:43.550 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f1a8361d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:20:43.980 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat initialized with port(s): 10001 (http)
+2017-12-28 17:20:43.988 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.apache.catalina.core.StandardService --- Starting service Tomcat
+2017-12-28 17:20:43.989 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.apache.catalina.core.StandardEngine --- Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-12-28 17:20:44.089 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+2017-12-28 17:20:44.089 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.springframework.web.context.ContextLoader --- Root WebApplicationContext: initialization completed in 1386 ms
+2017-12-28 17:20:44.828 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:20:44.829 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'traceFilter' to: [/*]
+2017-12-28 17:20:44.829 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:20:44.829 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:20:44.830 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:20:44.830 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:8344] [,,,] org.springframework.boot.web.servlet.ServletRegistrationBean --- Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:20:45.851 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter --- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11841b15: startup date [Thu Dec 28 17:20:42 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@413f69cc
+2017-12-28 17:20:45.996 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/kafka/send],methods=[GET]}" onto public java.lang.String com.hx.sender.controller.CollectController.sendKafka(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:20:45.998 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/call/{id}]}" onto public java.lang.String com.hx.sender.controller.UserController.callHome(java.lang.String)
+2017-12-28 17:20:45.999 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:20:46.000 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:20:46.146 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:20:46.146 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:20:46.251 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:20:46.802 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler --- Initializing ExecutorService 
+2017-12-28 17:20:46.998 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Registering beans for JMX exposure on startup
+2017-12-28 17:20:47.004 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2017-12-28 17:20:47.005 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'environmentManager' has been autodetected for JMX exposure
+2017-12-28 17:20:47.006 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'refreshScope' has been autodetected for JMX exposure
+2017-12-28 17:20:47.008 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2017-12-28 17:20:47.021 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2017-12-28 17:20:47.030 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=11841b15,type=ConfigurationPropertiesRebinder]
+2017-12-28 17:20:47.093 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.context.support.DefaultLifecycleProcessor --- Starting beans in phase 2147483547
+2017-12-28 17:20:47.138 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat started on port(s): 10001 (http)
+2017-12-28 17:20:47.141 INFO   study zipkin-sender [thread:main,pid:8344] [,,,] com.hx.sender.SenderApplication --- Started SenderApplication in 5.865 seconds (JVM running for 7.536)
+2017-12-28 17:23:12.981 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] com.hx.sender.SenderApplication --- No active profile set, falling back to default profiles: default
+2017-12-28 17:23:12.991 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext --- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fc07784: startup date [Thu Dec 28 17:23:12 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1f53a5dc
+2017-12-28 17:23:13.423 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.cloud.context.scope.GenericScope --- BeanFactory id=0b37db66-81f9-3395-bd4a-81987ee918c5
+2017-12-28 17:23:13.453 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$2928cffe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:23:13.512 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport' of type [org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport$$EnhancerBySpringCGLIB$$92b85c3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:23:13.566 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.sleuth.annotation.SleuthAnnotationAutoConfiguration' of type [org.springframework.cloud.sleuth.annotation.SleuthAnnotationAutoConfiguration$$EnhancerBySpringCGLIB$$57dc04ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:23:13.682 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'sleuthAdvisorConfig' of type [org.springframework.cloud.sleuth.annotation.SleuthAdvisorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:23:13.699 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7190c178] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 17:23:14.101 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat initialized with port(s): 10001 (http)
+2017-12-28 17:23:14.108 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.apache.catalina.core.StandardService --- Starting service Tomcat
+2017-12-28 17:23:14.109 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.apache.catalina.core.StandardEngine --- Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-12-28 17:23:14.179 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+2017-12-28 17:23:14.179 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.springframework.web.context.ContextLoader --- Root WebApplicationContext: initialization completed in 1188 ms
+2017-12-28 17:23:14.919 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:23:14.919 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'traceFilter' to: [/*]
+2017-12-28 17:23:14.920 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:23:14.920 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:23:14.920 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:23:14.920 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:6140] [,,,] org.springframework.boot.web.servlet.ServletRegistrationBean --- Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:23:16.003 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter --- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fc07784: startup date [Thu Dec 28 17:23:12 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1f53a5dc
+2017-12-28 17:23:16.143 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/kafka/send],methods=[GET]}" onto public java.lang.String com.hx.sender.controller.CollectController.sendKafka(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:23:16.144 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/call/{id}]}" onto public java.lang.String com.hx.sender.controller.UserController.callHome(java.lang.String)
+2017-12-28 17:23:16.146 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:23:16.146 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:23:16.309 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:23:16.309 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:23:16.417 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:23:16.924 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler --- Initializing ExecutorService 
+2017-12-28 17:23:17.113 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Registering beans for JMX exposure on startup
+2017-12-28 17:23:17.120 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2017-12-28 17:23:17.121 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'environmentManager' has been autodetected for JMX exposure
+2017-12-28 17:23:17.122 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'refreshScope' has been autodetected for JMX exposure
+2017-12-28 17:23:17.124 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2017-12-28 17:23:17.135 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2017-12-28 17:23:17.144 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=2fc07784,type=ConfigurationPropertiesRebinder]
+2017-12-28 17:23:17.209 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.context.support.DefaultLifecycleProcessor --- Starting beans in phase 2147483547
+2017-12-28 17:23:17.259 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat started on port(s): 10001 (http)
+2017-12-28 17:23:17.262 INFO   study zipkin-sender [thread:main,pid:6140] [,,,] com.hx.sender.SenderApplication --- Started SenderApplication in 5.564 seconds (JVM running for 6.225)
+2017-12-28 18:08:07.924 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] com.hx.sender.SenderApplication --- No active profile set, falling back to default profiles: default
+2017-12-28 18:08:07.924 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.apache.kafka.clients.producer.ProducerConfig --- ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.7.128:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2017-12-28 18:08:07.929 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.apache.kafka.common.utils.AppInfoParser --- Kafka version : 1.0.0
+2017-12-28 18:08:07.929 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.apache.kafka.common.utils.AppInfoParser --- Kafka commitId : aaa7af6d4a11b29d
+2017-12-28 18:08:07.945 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext --- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@997d532: startup date [Thu Dec 28 18:08:07 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@60129b9a
+2017-12-28 18:08:08.406 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.cloud.context.scope.GenericScope --- BeanFactory id=0b37db66-81f9-3395-bd4a-81987ee918c5
+2017-12-28 18:08:08.437 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$3273fe34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 18:08:08.492 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport' of type [org.springframework.cloud.sleuth.instrument.async.AsyncDefaultAutoConfiguration$DefaultAsyncConfigurerSupport$$EnhancerBySpringCGLIB$$9c038a74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 18:08:08.539 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.sleuth.annotation.SleuthAnnotationAutoConfiguration' of type [org.springframework.cloud.sleuth.annotation.SleuthAnnotationAutoConfiguration$$EnhancerBySpringCGLIB$$612732e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 18:08:08.656 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'sleuthAdvisorConfig' of type [org.springframework.cloud.sleuth.annotation.SleuthAdvisorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 18:08:08.676 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7adbefae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-28 18:08:09.067 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat initialized with port(s): 10001 (http)
+2017-12-28 18:08:09.075 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.apache.catalina.core.StandardService --- Starting service Tomcat
+2017-12-28 18:08:09.076 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.apache.catalina.core.StandardEngine --- Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-12-28 18:08:09.143 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+2017-12-28 18:08:09.144 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.springframework.web.context.ContextLoader --- Root WebApplicationContext: initialization completed in 1199 ms
+2017-12-28 18:08:09.922 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 18:08:09.923 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'traceFilter' to: [/*]
+2017-12-28 18:08:09.923 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 18:08:09.923 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 18:08:09.923 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.springframework.boot.web.servlet.FilterRegistrationBean --- Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 18:08:09.924 INFO   study zipkin-sender [thread:localhost-startStop-1,pid:9820] [,,,] org.springframework.boot.web.servlet.ServletRegistrationBean --- Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 18:08:10.864 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter --- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@997d532: startup date [Thu Dec 28 18:08:07 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@60129b9a
+2017-12-28 18:08:11.074 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/kafka/send],methods=[GET]}" onto public java.lang.String com.hx.sender.controller.CollectController.sendKafka(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 18:08:11.076 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/call/{id}]}" onto public java.lang.String com.hx.sender.controller.UserController.callHome(java.lang.String)
+2017-12-28 18:08:11.079 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 18:08:11.080 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 18:08:11.229 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 18:08:11.230 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 18:08:11.324 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 18:08:11.864 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler --- Initializing ExecutorService 
+2017-12-28 18:08:12.063 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Registering beans for JMX exposure on startup
+2017-12-28 18:08:12.070 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2017-12-28 18:08:12.072 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'environmentManager' has been autodetected for JMX exposure
+2017-12-28 18:08:12.074 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'refreshScope' has been autodetected for JMX exposure
+2017-12-28 18:08:12.077 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2017-12-28 18:08:12.088 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2017-12-28 18:08:12.098 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=997d532,type=ConfigurationPropertiesRebinder]
+2017-12-28 18:08:12.161 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.context.support.DefaultLifecycleProcessor --- Starting beans in phase 2147483547
+2017-12-28 18:08:12.190 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat started on port(s): 10001 (http)
+2017-12-28 18:08:12.194 INFO   study zipkin-sender [thread:main,pid:9820] [,,,] com.hx.sender.SenderApplication --- Started SenderApplication in 6.268 seconds (JVM running for 6.826)
+2017-12-28 18:09:27.271 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [,,,] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] --- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 18:09:27.271 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [,,,] org.springframework.web.servlet.DispatcherServlet --- FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 18:09:27.307 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [,,,] org.springframework.web.servlet.DispatcherServlet --- FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-12-28 18:09:27.345 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [6f29e54ae9f44da0,6f29e54ae9f44da0,,true] com.hx.sender.controller.CollectController --- kafka的消息=123
+2017-12-28 18:09:27.346 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [6f29e54ae9f44da0,6f29e54ae9f44da0,,true] org.apache.kafka.clients.producer.ProducerConfig --- ProducerConfig values: 
+	acks = 1
+	batch.size = 4096
+	bootstrap.servers = [192.168.7.128:9092]
+	buffer.memory = 40960
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2017-12-28 18:09:27.350 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [6f29e54ae9f44da0,6f29e54ae9f44da0,,true] org.apache.kafka.common.utils.AppInfoParser --- Kafka version : 1.0.0
+2017-12-28 18:09:27.351 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [6f29e54ae9f44da0,6f29e54ae9f44da0,,true] org.apache.kafka.common.utils.AppInfoParser --- Kafka commitId : aaa7af6d4a11b29d
+2017-12-28 18:09:27.360 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [6f29e54ae9f44da0,6f29e54ae9f44da0,,true] com.hx.sender.controller.CollectController --- 发送kafka成功.
+2017-12-28 18:09:28.722 WARN   study zipkin-sender [thread:AsyncReporter(org.springframework.cloud.sleuth.zipkin.RestTemplateSender@17ca8164),pid:9820] [,,,] zipkin.reporter.AsyncReporter$BoundedAsyncReporter --- Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://127.0.0.1:9411/api/v1/spans": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9411/api/v1/spans": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:666)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:628)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:590)
+	at org.springframework.cloud.sleuth.zipkin.RestTemplateSender.post(RestTemplateSender.java:73)
+	at org.springframework.cloud.sleuth.zipkin.RestTemplateSender.sendSpans(RestTemplateSender.java:46)
+	at zipkin.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:228)
+	at zipkin.reporter.AsyncReporter$Builder.lambda$build$0(AsyncReporter.java:153)
+	at zipkin.reporter.AsyncReporter$Builder$$Lambda$1.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:78)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:652)
+	... 8 common frames omitted
+2017-12-28 18:10:27.839 INFO   study zipkin-sender [thread:http-nio-10001-exec-5,pid:9820] [703e25361139f050,703e25361139f050,,true] com.hx.sender.controller.CollectController --- kafka的消息=123
+2017-12-28 18:10:27.839 INFO   study zipkin-sender [thread:http-nio-10001-exec-5,pid:9820] [703e25361139f050,703e25361139f050,,true] com.hx.sender.controller.CollectController --- 发送kafka成功.
+2017-12-28 18:10:39.616 INFO   study zipkin-sender [thread:http-nio-10001-exec-6,pid:9820] [e8b784a58726eaf7,e8b784a58726eaf7,,true] com.hx.sender.controller.CollectController --- kafka的消息=123
+2017-12-28 18:10:39.617 INFO   study zipkin-sender [thread:http-nio-10001-exec-6,pid:9820] [e8b784a58726eaf7,e8b784a58726eaf7,,true] com.hx.sender.controller.CollectController --- 发送kafka成功.
+2017-12-28 18:15:06.445 INFO   study zipkin-sender [thread:http-nio-10001-exec-9,pid:9820] [92c376747a0f135e,92c376747a0f135e,,true] com.hx.sender.controller.CollectController --- kafka的消息=123
+2017-12-28 18:15:06.446 INFO   study zipkin-sender [thread:http-nio-10001-exec-9,pid:9820] [92c376747a0f135e,92c376747a0f135e,,true] com.hx.sender.controller.CollectController --- 发送kafka成功.
+2017-12-28 19:39:54.083 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [d96fe6d663679d9d,d96fe6d663679d9d,,true] com.hx.sender.controller.CollectController --- kafka的消息=123
+2017-12-28 19:39:54.086 INFO   study zipkin-sender [thread:http-nio-10001-exec-2,pid:9820] [d96fe6d663679d9d,d96fe6d663679d9d,,true] com.hx.sender.controller.CollectController --- 发送kafka成功.
+2017-12-28 19:57:25.158 INFO   study zipkin-sender [thread:http-nio-10001-exec-5,pid:9820] [f76fd8dfacec0838,f76fd8dfacec0838,,true] com.hx.sender.controller.CollectController --- kafka的消息=123
+2017-12-28 19:57:25.166 INFO   study zipkin-sender [thread:http-nio-10001-exec-5,pid:9820] [f76fd8dfacec0838,f76fd8dfacec0838,,true] com.hx.sender.controller.CollectController --- 发送kafka成功.
+2017-12-28 19:58:44.536 INFO   study zipkin-sender [thread:http-nio-10001-exec-8,pid:9820] [21a2b3352f080ce8,21a2b3352f080ce8,,true] com.hx.sender.controller.CollectController --- kafka的消息=123
+2017-12-28 19:58:44.536 INFO   study zipkin-sender [thread:http-nio-10001-exec-8,pid:9820] [21a2b3352f080ce8,21a2b3352f080ce8,,true] com.hx.sender.controller.CollectController --- 发送kafka成功.

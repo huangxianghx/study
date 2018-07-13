@@ -11,4 +11,8 @@ spring:
 server:
     port: 8010
 
+spring.profiles: dev
+
+spring.profiles: test
+
 

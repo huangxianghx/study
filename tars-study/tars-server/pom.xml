@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hx</groupId>
+    <artifactId>tars-server</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>qq-cloud-central</groupId>
+            <artifactId>tars-server</artifactId>
+            <version>1.0.3</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>qq-cloud-central</groupId>
+                <artifactId>tars-maven-plugin</artifactId>
+                <version>1.0.3</version>
+                <configuration>
+                    <tars2JavaConfig>
+                        <!-- tars文件位置 -->
+                        <tarsFiles>
+                            <tarsFile>${basedir}/src/main/resources/hello.tars</tarsFile>
+                        </tarsFiles>
+                        <!-- 源文件编码 -->
+                        <tarsFileCharset>UTF-8</tarsFileCharset>
+                        <!-- 生成服务端代码 -->
+                        <servant>true</servant>
+                        <!-- 生成源代码编码 -->
+                        <charset>UTF-8</charset>
+                        <!-- 生成的源代码目录 -->
+                        <srcPath>${basedir}/src/main/java</srcPath>
+                        <!-- 生成源代码包前缀 -->
+                        <packagePrefixName>com.qq.tars.quickstart.server.</packagePrefixName>
+                    </tars2JavaConfig>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

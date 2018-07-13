@@ -1,0 +1,21 @@
+spring.application.name: grpc-client
+server.port: 10011
+#配置zipKin Server的地址
+spring.zipkin.base-url: http://127.0.0.1:9411
+
+#----eureka 配置
+eureka:
+    client:
+        register-with-eureka: true #纯客户端，不注册 eureka
+        fetch-registry: true
+        registry-fetch-interval-seconds: 10
+        eureka-service-url-poll-interval-seconds: 10
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+
+
+default.count.limit: 100
+default.money.limit: 1000
+default.expire.sec: 600
+max.dist.sec: 1800
+
