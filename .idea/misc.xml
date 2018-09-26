@@ -27,6 +27,7 @@
         <option value="$PROJECT_DIR$/tars-study/tars-study/pom.xml" />
         <option value="$PROJECT_DIR$/tars-study/tars-client/pom.xml" />
         <option value="$PROJECT_DIR$/tars-study/tars-server/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-study/reactor-study/pom.xml" />
       </list>
     </option>
   </component>

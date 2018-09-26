@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+huya.spring.sms:
+  appId: 31012
+  appKey: 84c3ffdee637aed8b1a13b375c0f8d54
+  url: http://udbtaf-test.huya.com
+

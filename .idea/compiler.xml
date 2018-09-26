@@ -10,6 +10,7 @@
         <module name="grpcProto" />
         <module name="grpcServer" />
         <module name="luckDraw" />
+        <module name="reactor-study" />
         <module name="spring-boot-study" />
         <module name="tars-client" />
         <module name="tars-server" />
@@ -28,6 +29,7 @@
       <module name="microservice-coumser" target="1.8" />
       <module name="microservice-provider" target="1.8" />
       <module name="microservice-register" target="1.8" />
+      <module name="reactor-study" target="1.8" />
       <module name="server-zipkin" target="1.8" />
       <module name="sharding-jdbc-2.0-demo" target="1.8" />
       <module name="sharding-jdbc-demo" target="1.8" />
