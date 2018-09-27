@@ -6,6 +6,9 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import java.net.InetAddress;
 import java.util.Date;
 
+/**
+ * String服务端业务逻辑处理
+ */
 public class StringServerHandler extends SimpleChannelInboundHandler<String> {
 
     @Override

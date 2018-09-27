@@ -1,6 +1,6 @@
 package com.netty.server;
 
-import com.netty.handler.StringServerHandler;
+import com.netty.handler.HttpServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -8,16 +8,12 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
+import io.netty.handler.codec.http.*;
 
-/**
- * 接受string信息服务器
- */
-public class StringNettyServer {
+public class HttpNettyServer {
     private int port;
 
-    public StringNettyServer(int port){
+    public HttpNettyServer(int port){
         this.port = port;
     }
 
@@ -35,9 +31,11 @@ public class StringNettyServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast("decoder", new StringDecoder())
-                                    .addLast("encoder", new StringEncoder())
-                                    .addLast("handler", new StringServerHandler());//具体业务处理逻辑
+                            socketChannel.pipeline()
+                                    .addLast("encoder", new HttpResponseEncoder())//服务端返回response,加载response编码
+                                    .addLast("decoder", new HttpRequestDecoder())//服务端接受request,加载request解码
+                                    .addLast("aggregator", new HttpObjectAggregator(512 * 1024))
+                                    .addLast("handler", new HttpServerHandler());//具体业务处理逻辑
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG,128)
@@ -59,8 +57,8 @@ public class StringNettyServer {
     //启动netty服务器
     public static void main(String[] args){
         try{
-            StringNettyServer stringNettyServer = new StringNettyServer(6789);
-            stringNettyServer.start();
+            HttpNettyServer httpNettyServer = new HttpNettyServer(6789);
+            httpNettyServer.start();
         }catch (Exception e){
             e.printStackTrace();
         }
