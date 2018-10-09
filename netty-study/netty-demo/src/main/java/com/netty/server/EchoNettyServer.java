@@ -1,6 +1,6 @@
 package com.netty.server;
 
-import com.netty.handler.StringServerHandler;
+import com.netty.handler.EchoServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -8,16 +8,17 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 
 /**
  * 接受string信息服务器
  */
-public class StringNettyServer {
+public class EchoNettyServer {
     private int port;
 
-    public StringNettyServer(int port){
+    public EchoNettyServer(int port){
         this.port = port;
     }
 
@@ -35,9 +36,10 @@ public class StringNettyServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast("decoder", new StringDecoder())
-                                    .addLast("encoder", new StringEncoder())
-                                    .addLast("handler", new StringServerHandler());//具体业务处理逻辑
+                            socketChannel.pipeline().addLast("decoder", new StringDecoder())//字符串解码
+                                    .addLast("encoder", new StringEncoder())//字符串编码
+                                    .addLast("aggregator", new HttpObjectAggregator(512 * 1024))
+                                    .addLast("handler", new EchoServerHandler());//具体业务处理逻辑
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG,128)
@@ -59,8 +61,8 @@ public class StringNettyServer {
     //启动netty服务器
     public static void main(String[] args){
         try{
-            StringNettyServer stringNettyServer = new StringNettyServer(6789);
-            stringNettyServer.start();
+            EchoNettyServer echoNettyServer = new EchoNettyServer(6789);
+            echoNettyServer.start();
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -1,6 +1,6 @@
 package com.netty.client;
 
-import com.netty.handler.StringClientHandler;
+import com.netty.handler.EchoClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
@@ -16,7 +16,7 @@ import java.io.IOException;
 /**
  * 发送string信息客户端
  */
-public class StringNettyClient {
+public class EchoNettyClient {
     public static String host = "127.0.0.1";  //ip地址
     public static int port = 6789;          //端口
     /// 通过nio方式来接收连接和处理连接
@@ -37,7 +37,7 @@ public class StringNettyClient {
                 protected void initChannel(SocketChannel socketChannel) throws Exception {
                     socketChannel.pipeline().addLast("decoder", new StringDecoder())
                             .addLast("encoder", new StringEncoder())
-                            .addLast("handler",new StringClientHandler());
+                            .addLast("handler",new EchoClientHandler());
                 }
             });
         // 连接服务端
@@ -46,8 +46,34 @@ public class StringNettyClient {
     }
 
     public static void star() throws IOException{
-        String str="Hello Netty";
+        String str="D:\\prod.jpg";
         ch.writeAndFlush(str+ "\r\n");
         System.out.println("客户端发送数据:"+str);
+    }
+
+    /**
+     * 获取客户端连接
+     * @return
+     * @throws Exception
+     */
+    public Channel getClient(){
+        try{
+            b.group(group)
+                    .channel(NioSocketChannel.class)
+                    .handler(new ChannelInitializer<SocketChannel>() {
+                        @Override
+                        protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            socketChannel.pipeline().addLast("decoder", new StringDecoder())
+                                    .addLast("encoder", new StringEncoder())
+                                    .addLast("handler",new EchoClientHandler());
+                        }
+                    });
+            // 连接服务端
+            ch = b.connect(host, port).sync().channel();
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return ch;
     }
 }

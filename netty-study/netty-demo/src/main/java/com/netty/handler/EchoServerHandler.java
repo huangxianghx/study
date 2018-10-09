@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * String服务端业务逻辑处理
  */
-public class StringServerHandler extends SimpleChannelInboundHandler<String> {
+public class EchoServerHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String msg)
@@ -19,9 +19,8 @@ public class StringServerHandler extends SimpleChannelInboundHandler<String> {
         if("quit".equals(msg)){//服务端断开的条件
             ctx.close();
         }
-        Date date=new Date();
         // 返回客户端消息
-        ctx.writeAndFlush(date+"\n");
+        ctx.writeAndFlush(msg+"\n");
     }
 
     /*

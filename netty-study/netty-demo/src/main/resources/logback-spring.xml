@@ -2,6 +2,8 @@
 <configuration>
     <conversionRule conversionWord="ip" converterClass="com.huya.coin.log.IpConverter"/>
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %marker ${springAppName:-} [thread:%thread,pid:${PID:-}] %logger{100} --- %msg%n"/>
+
 
     <!--控制台输出-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -11,7 +13,7 @@
         </encoder>
     </appender>
 
-    <root level="DEBUG">
+    <root level="INFO">
         <springProfile name="dev">
             <!--开发只开启控制台输出-->
             <appender-ref ref="STDOUT"/>
