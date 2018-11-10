@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/grpc-study/grpcClient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/luckDraw" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty-study/netty-demo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty-study/reactor-study" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-study/spring-boot-study" charset="UTF-8" />
   </component>

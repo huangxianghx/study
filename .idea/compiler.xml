@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="canal-study" />
         <module name="grpcClient" />
         <module name="grpcProto" />
         <module name="grpcServer" />
         <module name="luckDraw" />
+        <module name="netty-demo" />
         <module name="reactor-study" />
         <module name="spring-boot-study" />
         <module name="tars-client" />
@@ -22,6 +24,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="canal-study" target="1.8" />
       <module name="grpcClient" target="1.8" />
       <module name="grpcProto" target="1.7" />
       <module name="grpcServer" target="1.8" />
@@ -29,6 +32,7 @@
       <module name="microservice-coumser" target="1.8" />
       <module name="microservice-provider" target="1.8" />
       <module name="microservice-register" target="1.8" />
+      <module name="netty-demo" target="1.8" />
       <module name="reactor-study" target="1.8" />
       <module name="server-zipkin" target="1.8" />
       <module name="sharding-jdbc-2.0-demo" target="1.8" />

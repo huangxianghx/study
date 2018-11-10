@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/canal-study/canal-study.iml" filepath="$PROJECT_DIR$/canal-study/canal-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcClient/grpcClient.iml" filepath="$PROJECT_DIR$/grpc-study/grpcClient/grpcClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcProto/grpcProto.iml" filepath="$PROJECT_DIR$/grpc-study/grpcProto/grpcProto.iml" />
       <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcServer/grpcServer.iml" filepath="$PROJECT_DIR$/grpc-study/grpcServer/grpcServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/luckDraw/luckDraw.iml" filepath="$PROJECT_DIR$/luckDraw/luckDraw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-study/netty-demo/netty-demo.iml" filepath="$PROJECT_DIR$/netty-study/netty-demo/netty-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-study/reactor-study/reactor-study.iml" filepath="$PROJECT_DIR$/netty-study/reactor-study/reactor-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-study/spring-boot-study/spring-boot-study.iml" filepath="$PROJECT_DIR$/spring-boot-study/spring-boot-study/spring-boot-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/study.iml" filepath="$PROJECT_DIR$/.idea/study.iml" />
