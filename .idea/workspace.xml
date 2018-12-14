@@ -2,38 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8af54ba7-c955-4cdf-b5c7-677fdcf25187" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/CanalConstants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/CanalController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/CanalLauncher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/InstanceConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/AbstractKafkaTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/AbstractRocketMQTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/CanalRocketMQClientExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/SimpleCanalClientExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/monitor/InstanceAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/monitor/InstanceConfigMonitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/monitor/ManagerInstanceConfigMonitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/monitor/SpringInstanceConfigMonitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/canal.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/example/instance.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/logback.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/base-instance.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/default-instance.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/file-instance.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/group-instance.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/memory-instance.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/tsdb/h2-tsdb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/tsdb/mysql-tsdb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/tsdb/sql-map/sqlmap-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/tsdb/sql-map/sqlmap_history.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/tsdb/sql-map/sqlmap_snapshot.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/spring/tsdb/sql/create_table.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Aggs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Query.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/YmlUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canal-study/src/main/resources/file.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/canal-study/pom.xml" afterPath="$PROJECT_DIR$/canal-study/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/microservice-register/target/" />
     <ignored path="$PROJECT_DIR$/microservice-coumser/target/" />
@@ -90,74 +64,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SimpleCanalClientExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/SimpleCanalClientExample.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canal-study/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="408">
+              <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/canal-study/pom.xml">
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CanalRocketMQClientExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/CanalRocketMQClientExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="-1722">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CanalConnectors.class" pinned="false" current-in-tab="false">
-        <entry file="jar://E:/repository/com/alibaba/otter/canal.client/1.1.1/canal.client-1.1.1.jar!/com/alibaba/otter/canal/client/CanalConnectors.class">
+      <file leaf-file-name="SimpleCanalClientExample.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/SimpleCanalClientExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            <state relative-caret-position="1584">
+              <caret line="71" column="58" lean-forward="false" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleCanalClientExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/新建文件夹/src/main/java/com.canal/SimpleCanalClientExample.java">
+      <file leaf-file-name="YmlUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/YmlUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            <state relative-caret-position="3216">
+              <caret line="146" column="14" lean-forward="false" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canal-study/src/main/resources/file.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canal.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canal-study/src/main/resources/canal.properties">
+      <file leaf-file-name="Aggs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Aggs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2208">
-              <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="1248">
+              <caret line="80" column="1" lean-forward="false" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+              <folding>
+                <element signature="e#106#107#0" expanded="true" />
+                <element signature="e#136#137#0" expanded="true" />
+                <element signature="e#182#183#0" expanded="true" />
+                <element signature="e#220#221#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#965#966#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
+                <element signature="e#1067#1068#0" expanded="true" />
+                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#1187#1188#0" expanded="true" />
+                <element signature="e#1249#1250#0" expanded="true" />
+                <element signature="e#1381#1382#0" expanded="true" />
+                <element signature="e#1415#1416#0" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
+                <element signature="e#1495#1496#0" expanded="true" />
+                <element signature="e#1529#1530#0" expanded="true" />
+                <element signature="e#1563#1564#0" expanded="true" />
+                <element signature="e#1605#1606#0" expanded="true" />
+                <element signature="e#1643#1644#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionHandler.class" pinned="false" current-in-tab="false">
-        <entry file="jar://E:/repository/com/alibaba/otter/canal.server/1.1.1/canal.server-1.1.1.jar!/com/alibaba/otter/canal/server/netty/handler/SessionHandler.class">
+      <file leaf-file-name="Query.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Query.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="instance.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canal-study/src/main/resources/example/instance.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="240">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -251,12 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/java/com/hx/study/reactor/example/FluxCreator.java" />
-        <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/java/com/hx/study/reactor/ip/IpService.java" />
-        <option value="$PROJECT_DIR$/netty-study/reactor-study/pom.xml" />
-        <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/java/com/hx/study/reactor/service/TCPReacotr.java" />
         <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/java/com/hx/study/reactor/service/TCPReactor.java" />
         <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/java/com/hx/study/reactor/server/TCPHandler.java" />
         <option value="$PROJECT_DIR$/netty-study/reactor-study/src/main/java/com/hx/study/reactor/server/TCPReactorServer.java" />
@@ -296,12 +295,18 @@
         <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/CanalConstants.java" />
         <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/CanalController.java" />
         <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/CanalLauncher.java" />
-        <option value="$PROJECT_DIR$/canal-study/pom.xml" />
         <option value="$PROJECT_DIR$/canal-study/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/event/UserEventStore.java" />
         <option value="$PROJECT_DIR$/canal-study/src/main/resources/example/instance.properties" />
         <option value="$PROJECT_DIR$/canal-study/src/main/resources/canal.properties" />
         <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/SimpleCanalClientExample.java" />
+        <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Person.java" />
+        <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Query.java" />
+        <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Aggs.java" />
+        <option value="$PROJECT_DIR$/canal-study/pom.xml" />
+        <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/App.java" />
+        <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/YamlUtil.java" />
+        <option value="$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/YmlUtil.java" />
       </list>
     </option>
   </component>
@@ -465,7 +470,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -524,7 +529,9 @@
               <item name="canal-study" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
@@ -533,86 +540,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="canal-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="springCloud-study" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="springCloud-study" type="462c0819:PsiDirectoryNode" />
-              <item name="microservice-provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="springCloud-study" type="462c0819:PsiDirectoryNode" />
-              <item name="microservice-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="springCloud-study" type="462c0819:PsiDirectoryNode" />
-              <item name="microservice-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="springCloud-study" type="462c0819:PsiDirectoryNode" />
-              <item name="microservice-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="新建文件夹" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="新建文件夹" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="新建文件夹" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="新建文件夹" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="新建文件夹" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.canal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
@@ -643,6 +570,186 @@
               <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.client:1.1.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.client:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.client-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.client:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.client-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.client:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.client-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.client:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.client-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.client:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.client-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.client:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.client-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+              <item name="protocol" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.instance.core:1.1.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.instance.core:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.instance.core-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.instance.core:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.instance.core-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.meta:1.1.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.meta:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.meta-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.meta:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.meta-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="meta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.parse:1.1.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.parse:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.parse-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.parse:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.parse-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="parse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.parse:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.parse-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="parse" type="462c0819:PsiDirectoryNode" />
+              <item name="inbound" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.parse:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.parse-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="parse" type="462c0819:PsiDirectoryNode" />
+              <item name="inbound" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.parse:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.parse-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="parse" type="462c0819:PsiDirectoryNode" />
+              <item name="inbound" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+              <item name="rds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.server:1.1.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.server:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.server-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.server:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.server-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.server:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.server-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.server:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.server-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.alibaba.otter:canal.server:1.1.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="canal.server-1.1.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="canal" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
@@ -700,16 +807,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/canal-study/pom.xml" />
+    <property name="last_opened_file_path" value="G:/new git/hycanal" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -755,7 +862,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleCanalClientExample">
+  <component name="RunManager" selected="Application.CanalRocketMQClientExample">
     <configuration name="CanalLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -764,6 +871,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.canal.CanalLauncher" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="canal-study" />
+      <envs />
+    </configuration>
+    <configuration name="CanalRocketMQClientExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.canal.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.canal.client.CanalRocketMQClientExample" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -822,14 +948,14 @@
       <module name="spring-boot-study" />
       <envs />
     </configuration>
-    <configuration name="TCPReactorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="YmlUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.hx.study.reactor.client.*" />
+          <option name="PATTERN" value="com.canal.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.hx.study.reactor.client.TCPReactorClient" />
+      <option name="MAIN_CLASS_NAME" value="com.canal.util.YmlUtil" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -838,26 +964,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="reactor-study" />
-      <envs />
-    </configuration>
-    <configuration name="TCPReactorServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.hx.study.reactor.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.hx.study.reactor.server.TCPReactorServer" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="reactor-study" />
+      <module name="canal-study" />
       <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -942,19 +1049,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.SpringBootStudyApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TCPReactorServer" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TCPReactorClient" />
-      <item index="3" class="java.lang.String" itemvalue="Application.HttpNettyServer" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CanalLauncher" />
-      <item index="5" class="java.lang.String" itemvalue="Application.SimpleCanalClientExample" />
+      <item index="1" class="java.lang.String" itemvalue="Application.HttpNettyServer" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CanalLauncher" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SimpleCanalClientExample" />
+      <item index="4" class="java.lang.String" itemvalue="Application.YmlUtil" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CanalRocketMQClientExample" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.SimpleCanalClientExample" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CanalLauncher" />
-        <item index="2" class="java.lang.String" itemvalue="Application.HttpNettyServer" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TCPReactorClient" />
-        <item index="4" class="java.lang.String" itemvalue="Application.TCPReactorServer" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CanalRocketMQClientExample" />
+        <item index="1" class="java.lang.String" itemvalue="Application.YmlUtil" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SimpleCanalClientExample" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CanalLauncher" />
+        <item index="4" class="java.lang.String" itemvalue="Application.HttpNettyServer" />
       </list>
     </recent_temporary>
   </component>
@@ -1007,7 +1114,14 @@
       <workItem from="1540866973499" duration="9566000" />
       <workItem from="1541041792392" duration="595000" />
       <workItem from="1541474215648" duration="3003000" />
-      <workItem from="1541835683446" duration="80000" />
+      <workItem from="1541835683446" duration="2860000" />
+      <workItem from="1542101736283" duration="384000" />
+      <workItem from="1542102129304" duration="275000" />
+      <workItem from="1542102408344" duration="307000" />
+      <workItem from="1542102722123" duration="1459000" />
+      <workItem from="1542187563737" duration="2699000" />
+      <workItem from="1542594115802" duration="2629000" />
+      <workItem from="1542624794809" duration="1215000" />
     </task>
     <task id="LOCAL-00001" summary="集成kafka、zipkin">
       <created>1513851476776</created>
@@ -1079,11 +1193,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539071702550</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="canal">
+      <created>1541835813682</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1541835813683</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269939000" />
+    <option name="totallyTimeSpent" value="281687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1096,6 +1217,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1105,13 +1227,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54347825" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3326226" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5097826" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29424307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3075693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1154,7 +1276,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="netty demo" />
     <MESSAGE value="httpNetty" />
-    <option name="LAST_COMMIT_MESSAGE" value="httpNetty" />
+    <MESSAGE value="canal" />
+    <option name="LAST_COMMIT_MESSAGE" value="canal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1205,48 +1328,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://E:/repository/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final.jar!/io/netty/bootstrap/Bootstrap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="176" column="32" lean-forward="true" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final.jar!/io/netty/channel/ChannelOutboundInvoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final.jar!/io/netty/channel/AbstractChannel.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="192" column="34" lean-forward="false" selection-start-line="192" selection-start-column="34" selection-end-line="192" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final.jar!/io/netty/channel/AbstractChannelHandlerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9672">
-          <caret line="480" column="60" lean-forward="false" selection-start-line="480" selection-start-column="60" selection-end-line="480" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final.jar!/io/netty/channel/ChannelOutboundHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final.jar!/io/netty/channel/DefaultChannelPipeline.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1095" column="27" lean-forward="false" selection-start-line="1095" selection-start-column="27" selection-end-line="1095" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/repository/io/netty/netty-all/4.1.29.Final/netty-all-4.1.29.Final.jar!/io/netty/channel/Channel.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
@@ -1328,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1364,7 +1444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,7 +1451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,9 +1508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="331" column="0" lean-forward="true" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1441,7 +1516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1489,19 +1563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/SimpleCanalClientExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/CanalLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1128">
           <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1509,7 +1574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1517,7 +1581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1525,7 +1588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2208">
           <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,7 +1595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1569,13 +1630,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Person.java" />
+    <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/Aggs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="80" column="1" lean-forward="false" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+          <folding>
+            <element signature="e#106#107#0" expanded="true" />
+            <element signature="e#136#137#0" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="e#1529#1530#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canal-study/src/main/resources/file.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/util/YmlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3216">
+          <caret line="146" column="14" lean-forward="false" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/canal-study/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/CanalRocketMQClientExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="-1722">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canal-study/src/main/java/com/canal/client/SimpleCanalClientExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="71" column="58" lean-forward="false" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
           <folding />
         </state>
       </provider>
