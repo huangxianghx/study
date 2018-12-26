@@ -1,13 +1,10 @@
 package com.canal.disruptor;
 
-import com.canal.client.CanalRocketMQClientExample;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import com.lmax.disruptor.BlockingWaitStrategy;
-import com.lmax.disruptor.EventFactory;
-import com.lmax.disruptor.EventHandler;
-import com.lmax.disruptor.EventTranslatorOneArg;
+import com.lmax.disruptor.*;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
+import org.jboss.netty.channel.MessageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,18 +16,20 @@ import java.util.concurrent.ThreadFactory;
  * Disruptor例子
  * jerry li
  */
-public class DisruptorDSLExample {
-    protected final static Logger logger  = LoggerFactory.getLogger(DisruptorDSLExample.class);
+public class DisruptorExample {
+    protected final static Logger logger  = LoggerFactory.getLogger(DisruptorExample.class);
 
     /**
      * 用户自定义事件
      */
     class ExampleEvent{
-        Object data ;
-        Object ext;
+        String step1 ;
+        String step2 ;
+        String step3 ;
+        String step4 ;
         @Override
         public String toString() {
-            return "DisruptorDSLExample[data:"+this.data+",ext:"+ext+"]";
+            return "DisruptorDSLExample[step1:"+this.step1+",step2:"+step2+",step3:"+step3+",step4:"+step4+"]";
         }
     }
 
@@ -45,19 +44,19 @@ public class DisruptorDSLExample {
         }
     }
 
-    /**
-     * 生产者在发布事件时，使用翻译器将原始对象设置到RingBuffer的对象中
-     */
-    static class IntToExampleEventTranslator implements EventTranslatorOneArg<ExampleEvent, Integer>{
-
-        static final IntToExampleEventTranslator INSTANCE = new IntToExampleEventTranslator();
-
-        @Override
-        public void translateTo(ExampleEvent event, long sequence, Integer arg0) {
-            event.data = arg0 ;
-            logger.info("put data "+sequence+", "+event+", "+arg0);
-        }
-    }
+//    /**
+//     * 生产者在发布事件时，使用翻译器将原始对象设置到RingBuffer的对象中
+//     */
+//    static class IntToExampleEventTranslator implements EventTranslatorOneArg<ExampleEvent, Integer>{
+//
+//        static final IntToExampleEventTranslator INSTANCE = new IntToExampleEventTranslator();
+//
+//        @Override
+//        public void translateTo(ExampleEvent event, long sequence, Integer arg0) {
+//            event.data = arg0 ;
+//            logger.info("put data "+sequence+", "+event+", "+arg0);
+//        }
+//    }
 
     // 用于事件处理(EventProcessor)的线程工厂
     ThreadFactory threadFactory =
@@ -85,40 +84,41 @@ public class DisruptorDSLExample {
                 new BlockingWaitStrategy()); // 等待环形缓冲游标的等待策略，这里使用阻塞模式，也是Disruptor中唯一有锁的地方
 
         // 消费者模拟-日志处理
-        EventHandler journalHandler = new EventHandler() {
+        EventHandler journalHandler = new EventHandler<ExampleEvent>() {
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
+            public void onEvent(ExampleEvent event, long sequence, boolean endOfBatch) throws Exception {
                 Thread.sleep(8);
+                event.step1="step1";
                 logger.info(Thread.currentThread().getId() + " process journal " + event + ", seq: " + sequence);
             }
         };
 
         // 消费者模拟-复制处理
-        EventHandler replicateHandler = new EventHandler() {
+        EventHandler replicateHandler = new EventHandler<ExampleEvent>() {
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
+            public void onEvent(ExampleEvent event, long sequence, boolean endOfBatch) throws Exception {
                 Thread.sleep(10);
+                event.step2="step2";
                 logger.info(Thread.currentThread().getId() + " process replication " + event + ", seq: " + sequence);
             }
         };
 
         // 消费者模拟-解码处理
-        EventHandler unmarshallHandler = new EventHandler() { // 最慢
+        EventHandler unmarshallHandler = new EventHandler<ExampleEvent>() { // 最慢
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
+            public void onEvent(ExampleEvent event, long sequence, boolean endOfBatch) throws Exception {
                 Thread.sleep(1*1000);
-                if(event instanceof ExampleEvent){
-                    ((ExampleEvent)event).ext = "unmarshalled ";
-                }
+                event.step3="step3";
                 logger.info(Thread.currentThread().getId() + " process unmarshall " + event + ", seq: " + sequence);
 
             }
         };
 
         // 消费者处理-结果上报，只有执行完以上三种后才能执行此消费者
-        EventHandler resultHandler = new EventHandler() {
+        EventHandler resultHandler = new EventHandler<ExampleEvent>() {
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
+            public void onEvent(ExampleEvent event, long sequence, boolean endOfBatch) throws Exception {
+                event.step4="step4";
                 logger.info(Thread.currentThread().getId() + " =========== result " + event + ", seq: " + sequence);
                 latch.countDown();
             }
@@ -148,7 +148,7 @@ public class DisruptorDSLExample {
 
     public static void main(String[] args) {
         final int events = 20; // 必须为偶数
-        DisruptorDSLExample disruptorDSLExample = new DisruptorDSLExample();
+        DisruptorExample disruptorDSLExample = new DisruptorExample();
         final CountDownLatch latch = new CountDownLatch(events);
 
         disruptorDSLExample.createDisruptor(latch);
@@ -158,10 +158,13 @@ public class DisruptorDSLExample {
         Thread produceThread0 = new Thread(new Runnable() {
             @Override
             public void run() {
+
                 int x = 0;
                 while(x++ < events / 2){
-                    disruptor.getRingBuffer().publishEvent(IntToExampleEventTranslator.INSTANCE, x);
-//                    disruptor.publishEvent(IntToExampleEventTranslator.INSTANCE, x);
+                    RingBuffer<ExampleEvent> ringBuffer =  disruptor.getRingBuffer();
+                    ExampleEvent event = ringBuffer.get(x);
+                    event.step1="thread1";
+                    ringBuffer.publish(x);
                 }
             }
         });
@@ -172,8 +175,7 @@ public class DisruptorDSLExample {
             public void run() {
                 int x = 0;
                 while(x++ < events / 2){
-                    disruptor.getRingBuffer().publishEvent(IntToExampleEventTranslator.INSTANCE, x);
-//                    disruptor.publishEvent(IntToExampleEventTranslator.INSTANCE, x);
+                    disruptor.getRingBuffer().publish(x);
 
                 }
             }

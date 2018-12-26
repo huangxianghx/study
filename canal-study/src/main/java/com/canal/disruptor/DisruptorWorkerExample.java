@@ -1,15 +1,12 @@
 package com.canal.disruptor;
 
-import com.canal.client.CanalRocketMQClientExample;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.EventFactory;
-import com.lmax.disruptor.EventHandler;
 import com.lmax.disruptor.EventTranslatorOneArg;
+import com.lmax.disruptor.WorkHandler;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.concurrent.CountDownLatch;
@@ -17,10 +14,10 @@ import java.util.concurrent.ThreadFactory;
 
 /**
  * Disruptor例子
+ * 多线程并发，效率更快
  * jerry li
  */
-public class DisruptorDSLExample {
-    protected final static Logger logger  = LoggerFactory.getLogger(DisruptorDSLExample.class);
+public class DisruptorWorkerExample {
 
     /**
      * 用户自定义事件
@@ -30,7 +27,7 @@ public class DisruptorDSLExample {
         Object ext;
         @Override
         public String toString() {
-            return "DisruptorDSLExample[data:"+this.data+",ext:"+ext+"]";
+            return "DisruptorHandleExample[data:"+this.data+",ext:"+ext+"]";
         }
     }
 
@@ -55,7 +52,7 @@ public class DisruptorDSLExample {
         @Override
         public void translateTo(ExampleEvent event, long sequence, Integer arg0) {
             event.data = arg0 ;
-            logger.info("put data "+sequence+", "+event+", "+arg0);
+            System.err.println("put data "+sequence+", "+event+", "+arg0);
         }
     }
 
@@ -81,58 +78,58 @@ public class DisruptorDSLExample {
                 new ExampleEventFactory(),  // 用于创建环形缓冲中对象的工厂
                 8,  // 环形缓冲的大小
                 threadFactory,  // 用于事件处理的线程工厂
-                ProducerType.SINGLE, // 生产者类型，单vs多生产者
+                ProducerType.MULTI, // 生产者类型，单vs多生产者
                 new BlockingWaitStrategy()); // 等待环形缓冲游标的等待策略，这里使用阻塞模式，也是Disruptor中唯一有锁的地方
 
         // 消费者模拟-日志处理
-        EventHandler journalHandler = new EventHandler() {
+        WorkHandler journalHandler = new WorkHandler() {
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
+            public void onEvent(Object event) throws Exception {
                 Thread.sleep(8);
-                logger.info(Thread.currentThread().getId() + " process journal " + event + ", seq: " + sequence);
+                System.out.println(Thread.currentThread().getId() + " process journal " + event);
             }
         };
 
         // 消费者模拟-复制处理
-        EventHandler replicateHandler = new EventHandler() {
+        WorkHandler replicateHandler = new WorkHandler() {
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
+            public void onEvent(Object event) throws Exception {
                 Thread.sleep(10);
-                logger.info(Thread.currentThread().getId() + " process replication " + event + ", seq: " + sequence);
+                System.out.println(Thread.currentThread().getId() + " process replication " + event);
             }
         };
 
         // 消费者模拟-解码处理
-        EventHandler unmarshallHandler = new EventHandler() { // 最慢
+        WorkHandler unmarshallHandler = new WorkHandler() { // 最慢
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
+            public void onEvent(Object event) throws Exception {
                 Thread.sleep(1*1000);
                 if(event instanceof ExampleEvent){
                     ((ExampleEvent)event).ext = "unmarshalled ";
                 }
-                logger.info(Thread.currentThread().getId() + " process unmarshall " + event + ", seq: " + sequence);
+                System.out.println(Thread.currentThread().getId() + " process unmarshall " + event);
 
             }
         };
 
         // 消费者处理-结果上报，只有执行完以上三种后才能执行此消费者
-        EventHandler resultHandler = new EventHandler() {
+        WorkHandler resultHandler = new WorkHandler() {
             @Override
-            public void onEvent(Object event, long sequence, boolean endOfBatch) throws Exception {
-                logger.info(Thread.currentThread().getId() + " =========== result " + event + ", seq: " + sequence);
+            public void onEvent(Object event) throws Exception {
+                System.out.println(Thread.currentThread().getId() + " =========== result " + event );
                 latch.countDown();
             }
         };
         // 定义消费链，先并行处理日志、解码和复制，再处理结果上报
         disruptor
-                .handleEventsWith(
-                        new EventHandler[]{
+                .handleEventsWithWorkerPool(
+                        new WorkHandler[]{
                                 journalHandler,
                                 unmarshallHandler,
                                 replicateHandler
                         }
                 )
-                .then(resultHandler);
+                .thenHandleEventsWithWorkerPool(resultHandler);
         // 启动Disruptor
         disruptor.start();
 
@@ -148,7 +145,7 @@ public class DisruptorDSLExample {
 
     public static void main(String[] args) {
         final int events = 20; // 必须为偶数
-        DisruptorDSLExample disruptorDSLExample = new DisruptorDSLExample();
+        DisruptorWorkerExample disruptorDSLExample = new DisruptorWorkerExample();
         final CountDownLatch latch = new CountDownLatch(events);
 
         disruptorDSLExample.createDisruptor(latch);
@@ -160,25 +157,21 @@ public class DisruptorDSLExample {
             public void run() {
                 int x = 0;
                 while(x++ < events / 2){
-                    disruptor.getRingBuffer().publishEvent(IntToExampleEventTranslator.INSTANCE, x);
-//                    disruptor.publishEvent(IntToExampleEventTranslator.INSTANCE, x);
+                    disruptor.publishEvent(IntToExampleEventTranslator.INSTANCE, x);
                 }
             }
         });
-        produceThread0.setName("produceThread0");
         // 生产线程1
         Thread produceThread1 = new Thread(new Runnable() {
             @Override
             public void run() {
                 int x = 0;
                 while(x++ < events / 2){
-                    disruptor.getRingBuffer().publishEvent(IntToExampleEventTranslator.INSTANCE, x);
-//                    disruptor.publishEvent(IntToExampleEventTranslator.INSTANCE, x);
+                    disruptor.publishEvent(IntToExampleEventTranslator.INSTANCE, x);
 
                 }
             }
         });
-        produceThread1.setName("produceThread1");
 
         produceThread0.start();
         produceThread1.start();
