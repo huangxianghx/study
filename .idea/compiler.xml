@@ -11,6 +11,7 @@
         <module name="grpcProto" />
         <module name="grpcServer" />
         <module name="luckDraw" />
+        <module name="my-flink-project" />
         <module name="netty-demo" />
         <module name="reactor-study" />
         <module name="spring-boot-study" />
@@ -32,6 +33,7 @@
       <module name="microservice-coumser" target="1.8" />
       <module name="microservice-provider" target="1.8" />
       <module name="microservice-register" target="1.8" />
+      <module name="my-flink-project" target="1.8" />
       <module name="netty-demo" target="1.8" />
       <module name="reactor-study" target="1.8" />
       <module name="server-zipkin" target="1.8" />

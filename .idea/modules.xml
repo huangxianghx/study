@@ -3,20 +3,36 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/canal-study/canal-study.iml" filepath="$PROJECT_DIR$/canal-study/canal-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/canal-study/canal-study.iml" filepath="$PROJECT_DIR$/canal-study/canal-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcClient/grpcClient.iml" filepath="$PROJECT_DIR$/grpc-study/grpcClient/grpcClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcClient/grpcClient.iml" filepath="$PROJECT_DIR$/grpc-study/grpcClient/grpcClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcProto/grpcProto.iml" filepath="$PROJECT_DIR$/grpc-study/grpcProto/grpcProto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcProto/grpcProto.iml" filepath="$PROJECT_DIR$/grpc-study/grpcProto/grpcProto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcServer/grpcServer.iml" filepath="$PROJECT_DIR$/grpc-study/grpcServer/grpcServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/grpc-study/grpcServer/grpcServer.iml" filepath="$PROJECT_DIR$/grpc-study/grpcServer/grpcServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/luckDraw/luckDraw.iml" filepath="$PROJECT_DIR$/luckDraw/luckDraw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luckDraw/luckDraw.iml" filepath="$PROJECT_DIR$/luckDraw/luckDraw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-flink-project/my-flink-project.iml" filepath="$PROJECT_DIR$/my-flink-project/my-flink-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-study/netty-demo/netty-demo.iml" filepath="$PROJECT_DIR$/netty-study/netty-demo/netty-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-study/netty-demo/netty-demo.iml" filepath="$PROJECT_DIR$/netty-study/netty-demo/netty-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-study/reactor-study/reactor-study.iml" filepath="$PROJECT_DIR$/netty-study/reactor-study/reactor-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-study/reactor-study/reactor-study.iml" filepath="$PROJECT_DIR$/netty-study/reactor-study/reactor-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-study/spring-boot-study/spring-boot-study.iml" filepath="$PROJECT_DIR$/spring-boot-study/spring-boot-study/spring-boot-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-study/spring-boot-study/spring-boot-study.iml" filepath="$PROJECT_DIR$/spring-boot-study/spring-boot-study/spring-boot-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/study.iml" filepath="$PROJECT_DIR$/.idea/study.iml" />
       <module fileurl="file://$PROJECT_DIR$/tars-study/tars-client/tars-client.iml" filepath="$PROJECT_DIR$/tars-study/tars-client/tars-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tars-study/tars-client/tars-client.iml" filepath="$PROJECT_DIR$/tars-study/tars-client/tars-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tars-study/tars-server/tars-server.iml" filepath="$PROJECT_DIR$/tars-study/tars-server/tars-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/tars-study/tars-server/tars-server.iml" filepath="$PROJECT_DIR$/tars-study/tars-server/tars-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/tars-study/tars-study/tars-study.iml" filepath="$PROJECT_DIR$/tars-study/tars-study/tars-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tars-study/tars-study/tars-study.iml" filepath="$PROJECT_DIR$/tars-study/tars-study/tars-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thrift-study/thrift-client-pool/thrift-client-pool.iml" filepath="$PROJECT_DIR$/thrift-study/thrift-client-pool/thrift-client-pool.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift-study/thrift-client-pool/thrift-client-pool.iml" filepath="$PROJECT_DIR$/thrift-study/thrift-client-pool/thrift-client-pool.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift-study/thriftClient/thriftClient.iml" filepath="$PROJECT_DIR$/thrift-study/thriftClient/thriftClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thrift-study/thriftClient/thriftClient.iml" filepath="$PROJECT_DIR$/thrift-study/thriftClient/thriftClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift-study/thriftProto/thriftProto.iml" filepath="$PROJECT_DIR$/thrift-study/thriftProto/thriftProto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thrift-study/thriftProto/thriftProto.iml" filepath="$PROJECT_DIR$/thrift-study/thriftProto/thriftProto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thrift-study/thriftServer/thriftServer.iml" filepath="$PROJECT_DIR$/thrift-study/thriftServer/thriftServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift-study/thriftServer/thriftServer.iml" filepath="$PROJECT_DIR$/thrift-study/thriftServer/thriftServer.iml" />
     </modules>
   </component>
