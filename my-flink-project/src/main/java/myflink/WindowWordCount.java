@@ -9,11 +9,18 @@ import org.apache.flink.util.Collector;
 
 public class WindowWordCount {
     public static void main(String[] args) throws Exception {
+        String hostname = "127.0.0.1";
+        Integer port = 9000;
+
+        if(args.length == 2){
+            hostname = args[0];
+            port = Integer.parseInt(args[1]);
+        }
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         DataStream<Tuple2<String, Integer>> dataStream = env
-                .socketTextStream("192.168.64.129", 9999)
+                .socketTextStream(hostname, port)
                 .flatMap(new Splitter())
                 .keyBy(0)
                 .timeWindow(Time.seconds(5))

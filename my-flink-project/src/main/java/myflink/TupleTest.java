@@ -5,7 +5,7 @@ import org.apache.flink.api.java.tuple.Tuple3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test {
+public class TupleTest {
     public static void main(String[] args) {
 
         List<Tuple3<Integer,String,Long>> tuple3List = new ArrayList<>();
