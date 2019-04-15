@@ -22,12 +22,15 @@ public class HttpNettyServer {
      * 客户端的是Bootstrap，服务端的则是ServerBootstrap。
      **/
     public void start() {
-        NioEventLoopGroup bossGroup = new NioEventLoopGroup();//accept
-        NioEventLoopGroup workerGroup = new NioEventLoopGroup();//bizWork
+        NioEventLoopGroup bossGroup = new NioEventLoopGroup();//accept线程
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup();//biz线程
         try{
             ServerBootstrap bootstrap = new ServerBootstrap();
-            bootstrap.group(bossGroup,workerGroup)
+
+            bootstrap.group(bossGroup,workerGroup) //初始化两个线程
+                    //根据class类型初始化对应channel
                     .channel(NioServerSocketChannel.class)
+                    //绑定业务处理器
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
