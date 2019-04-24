@@ -1,12 +1,21 @@
 package com.netty.collection;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * List集合的特点就是：有序(存储顺序和取出顺序一致),可重复
  * List中又有它自己对应的实现-->ListIterator接口，ListIterator可以往前遍历，添加元素，设置元素
  * ArrayList==>数组==>查询快，增删慢； LinkedList==>链表==>增删快、查询慢
  * 总的来说：查询多用ArrayList，增删多用LinkedList。
+ * CopyOnWriteArrayList是同步List的替代品，CopyOnWriteArraySet是同步Set的替代品。
+ * 无论是Hashtable-->ConcurrentHashMap，还是说Vector-->CopyOnWriteArrayList。
+ * JUC下支持并发的容器与老一代的线程安全类相比，总结起来就是加锁粒度的问题
+ *
+ * Hashtable、Vector加锁的粒度大(直接在方法声明处使用synchronized)
+ * ConcurrentHashMap、CopyOnWriteArrayList加锁粒度小
+ * 用各种的方式来实现线程安全，比如我们知道的ConcurrentHashMap用了cas锁、volatile等方式来实现线程安全
+ * JUC下的线程安全容器在遍历的时候不会抛出ConcurrentModificationException异常
  */
 public class ListTest {
 
@@ -19,11 +28,12 @@ public class ListTest {
      * 删除元素时不会减少容量，若希望减少容量则调用trimToSize()
      * 它不是线程安全的。它能存放null值。
      * 由于内部结构是数组（基于连续地址存储）add/remove元素的时候，如果不是从尾部操作，则需要移动元素位置，所以空间复杂度为O(n)，
-     * 但是get元素的时候，由于底层数据连续存储，通过数组下标获取数据存储指针，所以时间复杂度为O(1)。
+     * 但是get元素的时候，由于底层数据连续存储，可以通过数组下标获取数据存储指针，所以时间复杂度为O(1)。
      */
     public static void testArrayList(){
         /**
-         * 创建线程安全的ArrayList
+         * 创建线程安全的ArrayList，内部用synchronized关键字实现
+         * synchronized不是加在方法的声明处，而是方法的内部
          */
         Collections.synchronizedList(new ArrayList());
         //默认创建对象，初始化一个空数组
@@ -123,7 +133,7 @@ public class ListTest {
      * Vector 底层也是数组，与ArrayList最大的区别就是：同步(线程安全)
      * ArrayList 在底层数组不够用时在原来的基础上扩展0.5倍，Vector是扩展1倍。
      * Vector所有方法都是同步，有性能损失。
-     * Vector初始length是10 超过length时 以100%比率增长，相比于ArrayList更多消耗内存。
+     * Vector初始length是10 超过length时 以100%比率增长，相比于ArrayList更多消耗存储空间。
      */
     public static void testVector(){
         Vector vector = new Vector();
@@ -139,9 +149,37 @@ public class ListTest {
         }
     }
 
+    /**
+     * CopyOnWriteArrayList是线程安全容器(相对于ArrayList)，底层通过复制数组的方式来实现。
+     * CopyOnWriteArrayList在遍历的使用不会抛出ConcurrentModificationException异常，并且遍历的时候就不用额外加锁
+     * 元素可以为null
+     *
+     * CopyOnWriteArrayList底层就是数组，加锁就交由ReentrantLock来完成。
+     *
+     * 如果遍历Vector/SynchronizedList是需要自己手动加锁的
+     * CopyOnWriteArrayList在使用迭代器遍历的时候，操作的都是原数组！所以不用加锁
+     *
+     * 在修改时，复制出一个新数组，修改的操作在新数组中完成，最后将新数组交由array变量指向。
+     * 写加锁，读不加锁
+     *
+     * CopyOnWriteArrayList的缺点了。
+     * 内存占用：如果CopyOnWriteArrayList经常要增删改里面的数据，经常要执行add()、set()、remove()的话，那是比较耗费内存的。
+     * 因为我们知道每次add()、set()、remove()这些增删改操作都要复制一个数组出来。
+     * 数据一致性：CopyOnWrite容器只能保证数据的最终一致性，不能保证数据的实时一致性。
+     * 从上面的例子也可以看出来，比如线程A在迭代CopyOnWriteArrayList容器的数据。线程B在线程A迭代的间隙中将CopyOnWriteArrayList部分的数据修改了(已经调用setArray()了)。但是线程A迭代出来的是原有的数据。
+     */
+    public static void testCopyOnWriteArrayList(){
+        CopyOnWriteArrayList copyOnWriteArrayList = new CopyOnWriteArrayList();
+        /**
+         * 在添加的时候就上锁，并复制一个新数组，增加操作在新数组上完成，将array指向到新数组中，最后解锁。
+         */
+        copyOnWriteArrayList.add("copyList");
+    }
+
     public static void main(String[] args) {
         testArrayList();
         testLinkedList();
         testVector();
+        testCopyOnWriteArrayList();
     }
 }

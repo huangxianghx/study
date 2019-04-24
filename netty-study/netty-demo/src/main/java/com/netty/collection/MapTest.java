@@ -103,6 +103,8 @@ public class MapTest {
      * 如果是替换的话，则用synchronized加锁保证线程安全
      * CAS算法：先比较是否相等，如果相等则替换
      * volatile经典总结：volatile仅仅用来保证该变量对所有线程的可见性，但不保证原子性
+     *
+     * ConcurrentHashMap用了cas锁、volatile等方式来实现线程安全
      */
     public static void testConcurrentHashMap(){
         ConcurrentHashMap map = new ConcurrentHashMap();
